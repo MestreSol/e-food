@@ -11,4 +11,11 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    rules:{
+      "no-console": "warn",
+      "semi": ["error", "always"],
+      "quotes": ["error", "double"]
+    }
+  }
 ];

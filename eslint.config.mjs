@@ -12,7 +12,12 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
-    rules:{
+    settings: {
+      react: {
+        version: "detect" // Automatically detect the React version
+      }
+    },
+    rules: {
       "no-console": "warn",
       "semi": ["error", "always"],
       "quotes": ["error", "double"]

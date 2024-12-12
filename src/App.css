@@ -217,3 +217,158 @@
   color: #fff;
   font-family: "Kelly Slab", sans-serif;
 }
+
+.product-area{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 10px #000;
+}
+
+.product-area img{
+  width: 30vw;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.product{
+  width: 30vw;
+  height: 100%;
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image .product-labels {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  
+}
+
+.product-image .product-labels span {
+  background-color: #ff6200;
+  color: #fff;
+  padding: 5px;
+  font-family: "Kelly Slab", sans-serif;
+  width: 130px;
+  border-left: #1f1f1f solid 1px;
+}
+
+.product-name{
+  color: #fff;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 30px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.product-detail{
+  margin:10px;
+}
+.product-price{
+  color: #ff6200;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-description{
+  color: #fff;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 16px;
+}
+
+
+.product-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header .product-rate{
+  display: flex;
+  align-items: center;
+}
+
+.product-header .product-rate img{
+  width: 20px;
+  height: 20px;
+}
+
+.product-header .product-rate span{
+  color: #fff;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 20px;
+}
+
+.product-description{
+  color: #fff;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-button{
+  background-color: #ff6200;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+footer{
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.footer-logo{
+  color: #ff6200;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 20px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.footer-links ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-links li{
+  margin-right: 20px;
+}
+.footer-links a{
+  color: #fff;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 16px;
+}
+
+.footer-links a:hover{
+  color: #ff6200;
+}
+

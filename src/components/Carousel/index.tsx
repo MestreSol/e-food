@@ -9,7 +9,7 @@ const Carousel = () => {
   return (
     <Swiper
          modules={[Navigation, Pagination, Scrollbar, A11y]}
-         spaceBetween={50}
+         spaceBetween={0}
          slidesPerView={1}
          navigation
          pagination={{ clickable: true }}
@@ -17,7 +17,15 @@ const Carousel = () => {
          onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>
-        <img src="https://via.placeholder.com/150" alt="slide 1" />
+        <img src="/image1.jpg" alt="slide 1" />
+        <div className="text">
+        <h2>
+          Slide 1
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et semper felis. Nullam nec metus in nisi lacinia gravida. Nulla facilisi. Nullam nec metus in
+        </p>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
         <img src="https://via.placeholder.com/150" alt="slide 2" />

@@ -2,7 +2,7 @@ import './App.css'
 import Header from './containers/Header'
 import Carousel from './components/Carousel'
 import SearchArea from './containers/searchArea'
-import ProductsArea from './containers/ProductsArea'
+import ProductsAreaComponent from './containers/ProductsArea'
 import Footer from './containers/Footer/indext'
 import GlobalStyle from './GlobalStyle'
 
@@ -13,7 +13,7 @@ function App() {
       <Header></Header>
       <Carousel></Carousel>
       <SearchArea></SearchArea>
-      <ProductsArea></ProductsArea>
+      <ProductsAreaComponent></ProductsAreaComponent>
       <Footer></Footer>
     </>
   )

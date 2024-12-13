@@ -1,15 +1,6 @@
-enum ProductLabel {
-  HOT = "Hot",
-  NEW = "New",
-}
+import type { Product } from "../../types/Product";
 type Props = {
-  labels: ProductLabel[];
-  name: string;
-  rate: number;
-  description: string;
-  price: string;
-  id: string;
-  img: string;
+  Product: Product;
 }  
 
 const Product = (prop: Props) => {
@@ -19,7 +10,7 @@ const Product = (prop: Props) => {
       <img src="https://via.placeholder.com/150" alt="product" />
       <div className="product-labels">
         {
-          prop.labels.map((label) => (
+          prop.Product.labels.map((label) => (
             <span>{label}</span>
           ))
         }
@@ -27,16 +18,16 @@ const Product = (prop: Props) => {
     </div>
     <div className="product-detail"> 
     <div className="product-header">
-      <div className="product-name">{prop.name}</div>
+      <div className="product-name">{prop.Product.name}</div>
       <div className="product-rate">
-        <span>{prop.rate}</span>
+        <span>{prop.Product.rate}</span>
         <img src="${prop.img}"></img>
       </div>
     </div>
     <div className="product-description">
-      {prop.description}
+      {prop.Product.description}
     </div>
-    <div className="product-price">{prop.price}</div>
+    <div className="product-price">{prop.Product.price}</div>
     <button className="product-button">
       Add to Cart
     </button>

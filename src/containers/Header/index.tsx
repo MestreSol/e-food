@@ -1,37 +1,39 @@
+import { SuperiorMenu, BrandArea, MenuList, MenuItem, Cart, CartNumber, CartIcon } from "./styled";
+
 const Header = () =>{
   return (
-      <nav className="SuperiorMenu">
-        <div className="brand-area">
+    <SuperiorMenu>
+        <BrandArea>
           <h1>
             Le-food
           </h1>
-        </div>
-        <div className="menu-list">
+        </BrandArea>
+        <MenuList>
           <ul>
-            <li className="menu-item .menu-active">
+            <MenuItem className="menu-active">
               <a>
                 Cardapio
               </a>
-            </li>
-            <li className="menu-item">
+            </MenuItem>
+            <MenuItem>
               <a>
                 Categorias
               </a>
-            </li>
-            <li className="menu-item">
+            </MenuItem>
+            <MenuItem>
               <a>
                 Mais
               </a>
-            </li>
+              </MenuItem>
           </ul>
-        </div>
-        <div className="cart">
-          <label className="cart-number">
+        </MenuList>
+        <Cart>
+          <CartNumber>
             0
-          </label>
-          <img src="/cart.png" className="cart-icon"/>
-        </div>
-      </nav>
+          </CartNumber>
+          <CartIcon src="/cart.png"></CartIcon>
+        </Cart>
+      </SuperiorMenu>
   )
 }
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const ProductsArea = styled.div`
   display: flex;
@@ -10,6 +10,6 @@ const ProductsArea = styled.div`
   padding: 20px;
   background-color: #1f1f1f;
   box-shadow: 0 0 10px #000;
-`;
+`
 
-export { ProductsArea };
+export { ProductsArea }

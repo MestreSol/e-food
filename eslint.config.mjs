@@ -17,11 +17,11 @@ export default [
       }
     },
     rules: {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhautive-deps": "warn",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off"
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhautive-deps': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off'
     }
   }
 ]

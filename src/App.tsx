@@ -11,15 +11,18 @@ import FilteredProducts from './containers/FilteredProducts'
 
 function App() {
   return (
-  <Router>
+    <Router>
       <GlobalStyle></GlobalStyle>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<ProductsAreaComponent Products={mockProducts} />}></Route>
-        <Route path='/filtered-products' Component={FilteredProducts}></Route>
+        <Route
+          path="/"
+          element={<ProductsAreaComponent Products={mockProducts} />}
+        ></Route>
+        <Route path="/filtered-products" Component={FilteredProducts}></Route>
       </Routes>
       <Footer></Footer>
-  </Router>
+    </Router>
   )
 }
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const ProductsArea = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const ProductsArea = styled.div`
   padding: 20px;
   background-color: #1f1f1f;
   box-shadow: 0 0 10px #000;
-`;
+`
 
 const Header = styled.div`
   width: 100%;
@@ -20,19 +20,19 @@ const Header = styled.div`
   background-repeat: no-repeat;
   position: relative;
   ::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
-  filter: blur(5px);
-  z-index: 1;
-}
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    filter: blur(5px);
+    z-index: 1;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -41,9 +41,9 @@ const HeaderContainer = styled.div`
   left: 10px;
   z-index: 2;
   color: #ff6200;
-  font-family: "Kelly Slab", sans-serif;
-  padding:10px;
-  background-color: argb(255,255,255, 0.5);
+  font-family: 'Kelly Slab', sans-serif;
+  padding: 10px;
+  background-color: argb(255, 255, 255, 0.5);
   h2 {
     margin: 25px;
     margin-bottom: 0px;
@@ -54,4 +54,4 @@ const HeaderContainer = styled.div`
   }
 `
 
-export { ProductsArea, Header, HeaderContainer };
+export { ProductsArea, Header, HeaderContainer }

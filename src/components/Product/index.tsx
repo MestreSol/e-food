@@ -1,37 +1,43 @@
-import type { Product } from "../../types/Product";
-type Props = {
-  Product: Product;
-}  
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ProductCard, ProductImage, ProductLabels, ProductDescription, ProductDetails, ProductHeader, ProductName, ProductRate, ProductPrice, ProductButton } from './styled';
+import type { Product as ProductType } from '../../types/Product';
 
-const Product = (prop: Props) => {
+type Props = {
+  Product: ProductType;
+};
+
+
+
+const Product: React.FC<Props> = ({ Product }) => {
+  const navigate = useNavigate();
+  const handleFilter = (label: string) => {
+    navigate(`/filtered-products?label=${label}`);
+  };
   return (
-    <div className="product">
-    <div className="product-image">
-      <img src="https://via.placeholder.com/150" alt="product" />
-      <div className="product-labels">
-        {
-          prop.Product.labels.map((label) => (
-            <span>{label}</span>
-          ))
-        }
-      </div>
-    </div>
-    <div className="product-detail"> 
-    <div className="product-header">
-      <div className="product-name">{prop.Product.name}</div>
-      <div className="product-rate">
-        <span>{prop.Product.rate}</span>
-        <img src="${prop.img}"></img>
-      </div>
-    </div>
-    <div className="product-description">
-      {prop.Product.description}
-    </div>
-    <div className="product-price">{prop.Product.price}</div>
-    <button className="product-button">
-      Add to Cart
-    </button>
-    </div>
-  </div>
+    <ProductCard>
+      <ProductImage>
+        <img src={Product.img} alt={Product.name} />
+        <ProductLabels>
+          {Product.labels.map((label, index) => (
+            <span key={index} onClick={() => handleFilter(label)}>{label}</span>
+          ))}
+        </ProductLabels>
+      </ProductImage>
+      <ProductDetails>
+        <ProductHeader>
+          <ProductName>{Product.name}</ProductName>
+          <ProductRate>
+            <img src="/star.png" alt="star" />
+            <span>{Product.rate}</span>
+          </ProductRate>
+        </ProductHeader>
+        <ProductDescription>{Product.description}</ProductDescription>
+        <ProductPrice>{Product.price}</ProductPrice>
+        <ProductButton>Add to Cart</ProductButton>
+      </ProductDetails>
+    </ProductCard>
   );
-}
+};
+
+export default Product;

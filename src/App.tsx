@@ -1,21 +1,28 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Header from './containers/Header'
 import Carousel from './components/Carousel'
 import SearchArea from './containers/searchArea'
-import ProductsArea from './containers/ProductsArea'
+import ProductsAreaComponent from './containers/ProductsArea'
 import Footer from './containers/Footer/indext'
+import GlobalStyle from './GlobalStyle'
+import mockProducts from './mocks/mockProducts'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import FilteredProducts from './containers/FilteredProducts'
 
 function App() {
   return (
-    <>
+    <Router>
+      <GlobalStyle></GlobalStyle>
       <Header></Header>
-      <Carousel></Carousel>
-      <SearchArea></SearchArea>
-      <ProductsArea></ProductsArea>
+      <Routes>
+        <Route
+          path="/"
+          element={<ProductsAreaComponent Products={mockProducts} />}
+        ></Route>
+        <Route path="/filtered-products" Component={FilteredProducts}></Route>
+      </Routes>
       <Footer></Footer>
-    </>
+    </Router>
   )
 }
 

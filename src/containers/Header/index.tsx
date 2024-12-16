@@ -1,38 +1,38 @@
-const Header = () =>{
+import {
+  SuperiorMenu,
+  BrandArea,
+  MenuList,
+  MenuItem,
+  Cart,
+  CartNumber,
+  CartIcon
+} from './styled'
+
+const Header = () => {
   return (
-      <nav className="SuperiorMenu">
-        <div className="brand-area">
-          <h1>
-            Le-food
-          </h1>
-        </div>
-        <div className="menu-list">
-          <ul>
-            <li className="menu-item .menu-active">
-              <a>
-                Cardapio
-              </a>
-            </li>
-            <li className="menu-item">
-              <a>
-                Categorias
-              </a>
-            </li>
-            <li className="menu-item">
-              <a>
-                Mais
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="cart">
-          <label className="cart-number">
-            0
-          </label>
-          <img src="/cart.png" className="cart-icon"/>
-        </div>
-      </nav>
+    <SuperiorMenu>
+      <BrandArea>
+        <h1>Le-food</h1>
+      </BrandArea>
+      <MenuList>
+        <ul>
+          <MenuItem className="menu-active">
+            <a>Cardapio</a>
+          </MenuItem>
+          <MenuItem>
+            <a>Categorias</a>
+          </MenuItem>
+          <MenuItem>
+            <a>Mais</a>
+          </MenuItem>
+        </ul>
+      </MenuList>
+      <Cart>
+        <CartNumber>0</CartNumber>
+        <CartIcon src="/cart.png"></CartIcon>
+      </Cart>
+    </SuperiorMenu>
   )
 }
 
-export default Header;
+export default Header

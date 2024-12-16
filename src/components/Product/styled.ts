@@ -31,6 +31,7 @@ const ProductLabels = styled.div`
     font-family: 'Kelly Slab', sans-serif;
     width: 130px;
     border-left: #1f1f1f solid 1px;
+    cursor:pointer;
   }
 `
 

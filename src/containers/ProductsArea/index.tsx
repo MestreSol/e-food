@@ -1,17 +1,25 @@
 import {ProductsArea} from './styled';
-import { Product } from '../../types/Product'; // Adjust the import path as necessary
-
+import type { Product  as ProductType} from '../../types/Product';
+import Product from '../../components/Product';
+import Carousel from '../../components/Carousel';
+import SearchAreaComponent from '../searchArea';
 type Props = {
-  Products: Product[];
+  Products: ProductType[];
 }
-const ProductsAreaComponent = () => {
+const ProductsAreaComponent = (prop: Props) => {
   return (
     <>
+     <Carousel></Carousel>
+     <SearchAreaComponent></SearchAreaComponent>
       <ProductsArea>
-       
+        {
+          prop.Products.map((product) => (
+            <Product Product={product}></Product>
+          ))
+        }
       </ProductsArea>
     </>
   );
 }
 
-export default ProductsArea;
+export default ProductsAreaComponent;

@@ -4,25 +4,31 @@ import { useEffect, useState } from "react";
 import mockProducts from "../../mocks/mockProducts";
 import { Product as ProductType, ProductLabel } from "../../types/Product";
 import Product from "../../components/Product";
-import { ProductsArea } from "./styled";
+import { Header, HeaderContainer, ProductsArea } from "./styled";
 const FilteredProducts: React.FC = () =>{
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const label = params.get('label');
   const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
-
+  const [firstProduct, setFirstProduct] = useState<ProductType>();
   useEffect(()=> {
     if(label){
       const filtered = mockProducts.filter(product => product.labels.includes(label as ProductLabel));
       setFilteredProducts(filtered);
+
+      const first = filtered[0];
+      setFirstProduct(first);
     }
   },[label])
+
   return (
     <>
-      <div className="Header">
-        <h2 className="SectionName">Filtered Products</h2>
-        <p className="SectionFilter">Filter applied: {label}</p>
-      </div>
+      <Header style={{backgroundImage: `url('${firstProduct?.img}')`}}>
+        <HeaderContainer>
+          <h2 className="SectionName">Filtered Products</h2>
+          <p className="SectionFilter">Filter applied: {label}</p>
+        </HeaderContainer>
+      </Header>
       <SearchAreaComponent></SearchAreaComponent>
        <ProductsArea>
         {
